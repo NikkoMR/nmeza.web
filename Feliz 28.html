@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖</title>
+    <style>
+        /* Estilos para todo el cuerpo */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Color de fondo de la página completa */
+        }
+
+        /* Estilos para el encabezado (header) */
+        header {
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            height: 100vh; /* La altura del header ocupará toda la pantalla */
+            background-color: #ff6b6b; /* Fondo del header */
+            color: rgb(195, 235, 17);
+            cursor: pointer; /* Cambia el cursor para mostrar que es clicable */
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em; /* Tamaño del título */
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Ocultar el contenido adicional inicialmente */
+        #contenido-adicional {
+            display: none;
+        }
+
+        /* Galería y secciones */
+        .galeria-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .imagen {
+            max-width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .imagen img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            
+        }
+
+        .imagen p {
+            padding: 10px;
+            color: #ff6b6b;
+            font-size: 1.1em;
+            
+        }
+
+        /* Centrar el título "Nuestros momentos juntos" */
+        h2 {
+            text-align: center;
+        }
+
+        /* Centrar GIF y texto en la sección final */
+        #mensaje-final .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #mensaje-final img {
+            max-width: 150px; /* Ajustar el tamaño del GIF */
+            margin-top: 20px;
+        }
+
+        /* Estilos para la sección final */
+        #mensaje-final {
+            background-color: #ffe1e8; /* Fondo suave */
+            padding: 50px 0;
+        }
+
+        #mensaje-final h2 {
+            font-size: 2.2em;
+            color: #ff6b6b;
+        }
+
+        #mensaje-final p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #ff4040;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado que al hacer clic mostrará el contenido -->
+    <header id="header">
+        <h1>Para la persona más especial 💖</h1>
+    </header>
+
+    <!-- Contenido adicional (imágenes y mensajes) -->
+    <div id="contenido-adicional">
+        <!-- Sección de Imágenes con Mensajes -->
+        <section id="galeria" class="seccion">
+            <div class="container">
+                <h2>Feliz 28 amorcito 💑 </h2>
+                <div class="galeria-grid">
+                    <div class="imagen">
+                        <img src="imagen4.jpg" alt="Momento 1">
+                        <p></p>
+                        <img src="catgif.gif" alt="Gatitos abrazándose">
+                    </div>
+                    <div class="imagen">
+                        <img src="imagen6.jpg" alt="Momento 2">
+                        <p> </p>
+                    </div>
+                    <div class="imagen">
+                        <img src="foto3.jpg" alt="Momento 3">
+                        <p>Una de mis fotos favoritas 💖</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Final con un Mensaje y GIF -->
+        <section id="mensaje-final" class="seccion">
+            <div class="container">
+                <h2>Te amo mucho💖</h2>
+                <p>Recuerda que eres la mejor, la número 1.</p>
+                <img src="imagen5.jpg" alt="Momento 2">
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript para mostrar el contenido al hacer clic -->
+    <script>
+        document.getElementById('header').addEventListener('click', function() {
+            // Mostrar el contenido adicional
+            document.getElementById('contenido-adicional').style.display = 'block';
+            
+            // Ocultar el encabezado después de hacer clic
+            document.getElementById('header').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
